@@ -22,7 +22,7 @@ codebutton.onclick = function () {
 let inputv = codeinput.value;
 let code = new XMLHttpRequest();
 
-code.open("GET", "/pasword.json")
+code.open("GET", "pasword.json")
 code.onload = function() {
     let codes = JSON.parse(code.responseText);
 
@@ -31,7 +31,7 @@ code.onload = function() {
             console.log(true)
             localStorage.setItem("user_activtion", true)
             delete codes[i]
-            console.log(codes)
+            location.reload()
         }
 
             
