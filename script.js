@@ -9,16 +9,13 @@ if (localStorage.getItem("user_activtion")){
 
 
 
-
-
-
-
 let button = document.getElementById("button")
 let input = document.getElementById("date")
 let text = document.getElementById("text")
 let user_activtion = localStorage.getItem("user_activtion");
 let codebutton = document.getElementById("submit")
 let codeinput = document.getElementById("code-input")
+let formcode = document.querySelector(".bor")
 
 
 codebutton.onclick = function () {
@@ -33,6 +30,8 @@ code.onload = function() {
         if (inputv === codes[i]) {
             console.log(true)
             localStorage.setItem("user_activtion", true)
+            delete codes[i]
+            console.log(codes)
         }
 
             
@@ -53,9 +52,14 @@ code.send()
 
 if (user_activtion == "false") {
     document.getElementById("body").classList.add("dis")
+    formcode.classList.remove("dis")
 }else{
     document.getElementById("body").classList.remove("dis")
-    
+    formcode.classList.add("dis")
+
+
+
+
     button.onclick = function () {
         let date = input.value;
         let dop = new Date("7/22/2024");
