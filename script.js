@@ -24,13 +24,16 @@ let code = new XMLHttpRequest();
 
 code.open("GET", "/pasword.json")
 code.onload = function() {
-    let codes = JSON.parse(code.responseText);
-
+    let codes
+    if (code.status >= 200 && code.status <= 299){
+        codes = JSON.parse(code.responseText);
+    }
+    console.log(codes)
     for (i = 0; i < codes.length; i++){
         if (inputv === codes[i]) {
             console.log(true)
             localStorage.setItem("user_activtion", true)
-            location.reload()
+            
             
         }
 
