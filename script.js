@@ -32,7 +32,7 @@ code.onload = function() {
             localStorage.setItem("user_activtion", true)
             delete codes[i]
             console.log(code)
-
+            
         }
 
             
