@@ -22,7 +22,7 @@ codebutton.onclick = function () {
 let inputv = codeinput.value;
 let code = new XMLHttpRequest();
 
-code.open("GET", "/pasword.json")
+code.open("GET", "pasword.json")
 code.onload = function() {
     let codes = JSON.parse(code.responseText);
 
