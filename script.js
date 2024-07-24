@@ -31,8 +31,12 @@ code.onload = function() {
             console.log(true)
             localStorage.setItem("user_activtion", true)
             delete codes[i]
-            delete code.responseText[i]
-            console.log(code.responseText)
+
+            let codepost = JSON.stringify(codes)
+            // let xhr = new XMLHttpRequest();
+            // xhr.open("POST", "/pasword.json")
+            // xhr.setRequestHeader("Content-Type", "application/json")
+            // xhr.send()
         }
 
             
@@ -40,7 +44,7 @@ code.onload = function() {
     }
 };
 
-code.send()
+code.send(codepost)
 }
 
 
