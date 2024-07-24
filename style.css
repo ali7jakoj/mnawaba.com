@@ -5,91 +5,173 @@
 .dis{
     display: none !important;
 }
-/* Resetting default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
-/* Container styles */
-.bor {
-    background-color: #fff;
+/* Main Container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+.do{
+    background-color: white;
+    padding: 10px 30px ;
+    border-radius: 10px;
+}
+.a{
+    text-align: center;
+}
+/* Form Box */
+.form-box {
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Form Elements */
+.form-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.form-text {
+    margin-top: 10px;
     text-align: center;
 }
 
-/* Input and button styles */
-input[type="text"], input[type="date"], button {
+.bor {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+}
+
+/* Form Elements */
+.form-content {
+    display: flex;
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+input[type="text"] {
+    flex: 1; /* توسيع الحقل ليأخذ المساحة المتاحة */
     padding: 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    width: 200px;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
 
-/* Header styles */
-.header {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.header-p {
-    text-align: center;
+#text {
+    margin-top: 20px;
     font-size: 18px;
     color: #555;
-    margin-bottom: 20px;
 }
-
-/* Form styles */
-.form {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.da{
     text-align: center;
 }
-
-.form-header {
-    font-size: 24px;
-    margin-bottom: 10px;
+#code-input{
+    width: 250px;
 }
 
-.form-text {
-    margin-bottom: 20px;
+
+
+#date{
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+#pos{
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-/* Paragraph styles */
-.da {
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-    color: #555;
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: #aaa;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+    
+    input[type="date"], input[type="number"], input[type="text"], button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #code-input{
+        width: 150px;
+    }
+}

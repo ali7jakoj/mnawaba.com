@@ -16,13 +16,13 @@ let user_activtion = localStorage.getItem("user_activtion");
 let codebutton = document.getElementById("submit")
 let codeinput = document.getElementById("code-input")
 let formcode = document.querySelector(".bor")
-
+let mnawabanumper = document.getElementById("pos")
 
 codebutton.onclick = function () {
 let inputv = codeinput.value;
 let code = new XMLHttpRequest();
 
-code.open("GET", "pasword.json")
+code.open("GET", "/pasword.json")
 code.onload = function() {
     let codes = JSON.parse(code.responseText);
 
@@ -59,10 +59,20 @@ if (user_activtion == "false") {
 
 
 
-
     button.onclick = function () {
+        var d = "";
+        if (mnawabanumper.value === "1"){
+            d = "7/20/2024";
+        } else if(mnawabanumper.value === "2"){
+            d = "7/21/2024";
+        }else if(mnawabanumper.value === "3"){
+            d = "7/22/2024";
+        }else if(mnawabanumper.value === "4"){
+            d = "7/23/2024";
+        }
+        console.log(d)
         let date = input.value;
-        let dop = new Date("7/22/2024");
+        let dop = new Date(d);
         let mnawba = new Date(date);
         let daysInMiliScound = mnawba - dop;
         let ageInDays = Math.trunc((daysInMiliScound)/1000/60/60/24)
