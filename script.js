@@ -33,10 +33,10 @@ code.onload = function() {
             delete codes[i]
 
             let codepost = JSON.stringify(codes)
-            // let xhr = new XMLHttpRequest();
-            // xhr.open("POST", "/pasword.json")
-            // xhr.setRequestHeader("Content-Type", "application/json")
-            // xhr.send()
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "pasword.json")
+            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.send(codepost)
         }
 
             
@@ -44,7 +44,7 @@ code.onload = function() {
     }
 };
 
-code.send(codepost)
+code.send()
 }
 
 
