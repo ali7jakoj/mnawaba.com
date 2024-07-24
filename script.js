@@ -31,8 +31,8 @@ code.onload = function() {
             console.log(true)
             localStorage.setItem("user_activtion", true)
             delete codes[i]
-            console.log(codes)
-            location.reload()
+            console.log(code)
+
         }
 
             
