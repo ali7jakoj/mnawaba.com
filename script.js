@@ -33,7 +33,7 @@ code.onload = function() {
         if (inputv === codes[i]) {
             console.log(true)
             localStorage.setItem("user_activtion", true)
-            
+            location.reload();
             
         }
 
