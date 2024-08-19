@@ -1,0 +1,177 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.dis{
+    display: none !important;
+}
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+.do{
+    background-color: white;
+    padding: 10px 30px ;
+    border-radius: 10px;
+}
+.a{
+    text-align: center;
+}
+/* Form Box */
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Form Elements */
+.form-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.form-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.bor {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+}
+
+/* Form Elements */
+.form-content {
+    display: flex;
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+input[type="text"] {
+    flex: 1; /* توسيع الحقل ليأخذ المساحة المتاحة */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+.da{
+    text-align: center;
+}
+#code-input{
+    width: 250px;
+}
+
+
+
+#date{
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+#pos{
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+    
+    input[type="date"], input[type="number"], input[type="text"], button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #code-input{
+        width: 150px;
+    }
+}

@@ -1,0 +1,63 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: linear-gradient(45deg, #08001f, #30197d);;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 50px;
+
+}
+.deco-1{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(233, 63, 120);
+    border-radius: 5px;
+    position: absolute;
+    top: 120px;
+    left: 20%;
+}
+.deco-2{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(75, 75, 235);
+    border-radius: 50%;
+    position: absolute;
+    top: 190px;
+    left: 68%;
+    
+}
+#clock{
+    color: white;
+    background-color: rgba(235, 0, 225, 0.11);
+    padding: 40px 100px;
+    transform: translateY(140px);
+    font-size: 60px;
+    backdrop-filter: blur(20px);
+}
+.time{
+    color: white;
+    background-color: rgba(235, 0, 225, 0.11);
+    padding: 80px 60px 41px 60px;
+    transform: translateY(140px);
+    font-size: 60px;
+    backdrop-filter: blur(20px);
+}
+.buts{
+    border-top: #dbd9e1 solid 3px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+.buts button{
+    color: white;
+    background-color: #30197d;
+    padding: 5px 10px;
+    border: black solid 1px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
